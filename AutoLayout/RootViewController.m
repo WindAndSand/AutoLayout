@@ -7,8 +7,13 @@
 //
 
 #import "RootViewController.h"
+#import "ViewController.h"
 
 @interface RootViewController ()
+
+@property(nonatomic, retain) NSMutableArray *viewControllers;
+
+@property(nonatomic, retain) NSMutableArray *titles;
 
 @end
 
@@ -16,12 +21,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    ViewController *viewOne = [[ViewController alloc] init];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _viewControllers = [NSMutableArray arrayWithObjects:viewOne, nil];
+    
+    _titles = [NSMutableArray arrayWithObjects:@"普通视图", nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,24 +39,36 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _viewControllers.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    static NSString *cellIdetifier = @"AutoLayout";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdetifier];
+    
+    if (!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdetifier];
+    }
+    
+    cell.textLabel.text = _titles[indexPath.row];
+    
     
     return cell;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.navigationController pushViewController:_viewControllers[indexPath.row] animated:YES];
+}
+
 
 /*
 // Override to support conditional editing of the table view.

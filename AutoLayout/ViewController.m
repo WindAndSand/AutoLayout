@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.title = @"使用 Frame 方式";
+    
+    UIView *purpleView = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 150, 150)];
+    purpleView.backgroundColor = [UIColor purpleColor];
+    [self.view addSubview:purpleView];
 }
 
 
