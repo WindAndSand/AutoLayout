@@ -16,6 +16,7 @@
 		017E27921F38A2230067A8EE /* AutoLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 017E27911F38A2230067A8EE /* AutoLayoutTests.m */; };
 		017E279D1F38A2230067A8EE /* AutoLayoutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 017E279C1F38A2230067A8EE /* AutoLayoutUITests.m */; };
 		017E27B11F38B05C0067A8EE /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 017E27B01F38B05C0067A8EE /* ViewControllerTwo.m */; };
+		017E27AC1F38A6AC0067A8EE /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017E27AB1F38A6AC0067A8EE /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		017E279E1F38A2230067A8EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		017E27AF1F38B05C0067A8EE /* ViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTwo.h; sourceTree = "<group>"; };
 		017E27B01F38B05C0067A8EE /* ViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTwo.m; sourceTree = "<group>"; };
+		017E27AA1F38A6AC0067A8EE /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		017E27AB1F38A6AC0067A8EE /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,10 @@
 				017E277B1F38A2230067A8EE /* AppDelegate.m */,
 				017E27AD1F38AFD60067A8EE /* 普通 */,
 				017E27AE1F38B0390067A8EE /* 自动布局 */,
+				017E27AA1F38A6AC0067A8EE /* RootViewController.h */,
+				017E27AB1F38A6AC0067A8EE /* RootViewController.m */,
+				017E277D1F38A2230067A8EE /* ViewController.h */,
+				017E277E1F38A2230067A8EE /* ViewController.m */,
 				017E27801F38A2230067A8EE /* Main.storyboard */,
 				017E27831F38A2230067A8EE /* Assets.xcassets */,
 				017E27851F38A2230067A8EE /* LaunchScreen.storyboard */,
@@ -296,6 +303,7 @@
 			files = (
 				017E277F1F38A2230067A8EE /* ViewController.m in Sources */,
 				017E277C1F38A2230067A8EE /* AppDelegate.m in Sources */,
+				017E27AC1F38A6AC0067A8EE /* RootViewController.m in Sources */,
 				017E27791F38A2230067A8EE /* main.m in Sources */,
 				017E27B11F38B05C0067A8EE /* ViewControllerTwo.m in Sources */,
 			);
